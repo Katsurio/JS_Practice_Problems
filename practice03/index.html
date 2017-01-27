@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 2</title>
+    <script>
+        var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+
+        function wunTooMullTea(Arr) {
+            var temp = [[],[],[]];
+            for (var i = 0; i < Arr.length; i++) {
+                switch (typeof Arr[i]) {
+                    case "boolean":
+                        temp[2].push(Arr[i]);
+                        break;
+                    case "number":
+                        temp[1].push(Arr[i]);
+                        break;
+                    case "string":
+                        temp[0].push(Arr[i]);
+                        break;
+                    default:
+                        console.log("Something's not right");
+                }
+                console.log(temp);
+            }
+            console.log(temp);
+            return temp;
+        }
+
+        console.log(wunTooMullTea(myArray));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
