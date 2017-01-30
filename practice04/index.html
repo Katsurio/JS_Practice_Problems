@@ -5,27 +5,18 @@
     <title>Practice Problem 2</title>
     <script>
         var myArray = ['mouse', 'cat', 'dog', 'human'];
-
         function sort(strArr) {
-            var tempArr = [];
-            for (var i = 1; i < strArr.length; i++) {
-                var constant = strArr[0];
-                for (var k = 1; k < strArr.length; k++) {
-                    if(constant > strArr[k]) {
-                        var temp = constant;
-                        console.log("Temp after: " +temp);
-                        console.log("constant before: " +constant);
-                        constant = strArr[k];
-                        strArr[0] = constant;
-                        console.log("constant after: " +constant);
-                        console.log("strArr[k] before: " +strArr[k]);
-                        strArr[k] = temp;
-                        console.log("strArr[k] after: " +strArr[k]);
-
-                        console.log(k + " inner for loop: " + temp + " " + constant + " " + strArr[k]);
-                    }
+            var temp, i;
+            for(i = 0; i < strArr.length; i++){
+                console.log("FOR LOOP @ i is: " + i);
+                if (strArr[i] > strArr[i+1]){
+                    console.log("Start IF @ i is: " + i);
+                    temp = strArr[i];
+                    strArr[i] = strArr[i+1];
+                    strArr[i+1] = temp;
+                    i = -1;
+                    console.log("End IF @ i is: " + i + " and strArr is: " + strArr);
                 }
-                tempArr.push(constant);
             }
             return strArr;
         }
