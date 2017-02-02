@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 10</title>
+    <script>
+        var abc = "abc";
+        function permutations(str) {
+            var charArr = str.split("");
+            var outputArr = [str];
+            var i = 1;
+            var length = str.length;
+            var arrMaxLength = (length) * (length - 1) * (length - 2);
+            do {
+                var tempArr = [];
+                var randomChar = charArr[Math.floor((Math.random() * length) + 1)];
+                if (tempArr.indexOf(randomChar) === -1) {
+                    tempArr.push(randomChar);
+                }
+
+            } while (i < arrMaxLength);
+//            for (i = 0; i < arrMaxLength; i++) {
+//
+//            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
