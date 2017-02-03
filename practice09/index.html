@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 10</title>
+    <script>
+        var myArray = ['cat', 'caterpillar', 'whale', 'accurate', 'smile', 'cactus', 'cute'];
+        var word = 'c';
+
+        function fittingWords(str, arrOstrs) {
+            var regex = "/" + str +"/gi";
+            var i;
+            var output = [];
+//            arrOstrs.match(regex);
+            for (i = 0; i < arrOstrs.length; i++) {
+                var arrIndexLength = arrOstrs[i].length;
+                var strLength = str.length;
+                if(arrOstrs[i].match("/" + str +"+/gi") !== null && arrIndexLength >= strLength) {
+                    output += arrOstrs[i];
+                }
+            }
+            return output;
+        }
+
+
+        console.log(fittingWords(word, myArray));
+        //        Output - ['cat','caterpillar','accurate','cactus']
+    </script>
+</head>
+<body>
+
+</body>
+</html>
