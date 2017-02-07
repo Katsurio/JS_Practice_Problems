@@ -5,17 +5,18 @@
     <title>Practice Problem 10</title>
     <script>
         var myArray = ['cat', 'caterpillar', 'whale', 'accurate', 'smile', 'cactus', 'cute'];
-        var word = 'c';
+        var word = 'cat';
 
         function fittingWords(str, arrOstrs) {
-            var regex = "/" + str +"/gi";
+            var regex = "/[" + str +"]/gi";
             var i;
             var output = [];
 
             for (i = 0; i < arrOstrs.length; i++) {
                 var arrIndexLength = arrOstrs[i].length;
                 var strLength = str.length;
-                if(arrOstrs[i].match("/" + str +"+/gi") !== null && arrIndexLength >= strLength) {
+                if(arrOstrs[i].match(regex) != null) {
+/*                && arrIndexLength >= strLength */
                     output += arrOstrs[i];
                 }
             }
