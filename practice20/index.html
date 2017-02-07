@@ -7,17 +7,26 @@
         var input_array = [5, 3, 2, 5, 1];
 
         function randomizeList(arr) {
+            debugger;
             var length = arr.length,
                 outputArr = [],
                 i = length,
                 randomIndex = Math.floor(Math.random() * i) +1;
+                debugger;
             while (length > 0) {
-                var temp = arr.splice(randomIndex,1);
-                console.log("temp: " + temp);
-                outputArr.push(temp);
-                console.log("starting array: " + arr);
-                console.log("output array: " + outputArr);
-                length = arr.length;
+                debugger;
+                if(arr.length === 0){
+                    debugger;
+                    break;
+                }else{
+                    debugger;
+                    var temp = arr.splice(randomIndex,1);
+                    console.log("temp: " + temp);
+                    outputArr.push(temp);
+                    console.log("starting array: " + arr);
+                    console.log("output array: " + outputArr);
+                    length = arr.length;
+                }
             }
 //            for (i; i >= 0; i--) {
 //                var temp = arr.splice(randomIndex,1);
@@ -27,6 +36,7 @@
 //                console.log("starting array: " + arr);
 //                console.log("output array: " + outputArr);
 //            }
+            debugger;
             console.log("FINAL output array: " + outputArr);
             return outputArr;
         }
