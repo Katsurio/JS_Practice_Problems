@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 8</title>
+    <script>
+
+        var skatCat = 'the cat in the hat';
+
+        function charConverter(str){
+
+            var i, char, output;
+            var newStrArr = [];
+
+
+            for(i = 0; i < str.length; i++){
+                charCode = str.charCodeAt(i);
+                newStrArr.push(charCode + "");
+            }
+            output = newStrArr.join("");
+            return output;
+        }
+
+        console.log(charConverter(skatCat));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
