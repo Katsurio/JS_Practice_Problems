@@ -12,19 +12,17 @@
                 {name: 'Kendra', age: 48, gender: 'F'}
             ];
         function sortObjListByName(objList) {
-            var output = [];
-            var i, iPlus1;
-            var temp;
+            var i, iPlus1, temp;
             for (i = 0; i < objList.length - 1; i++) {
                 iPlus1 = i + 1;
-                if (objList[i][name] > objList[iPlus1][name]) {
+                if (objList[i].name > objList[iPlus1].name) {
                     temp = objList[i];
                     objList[i] = objList[i + 1];
                     objList[i + 1] = temp;
                     i = -1;
                 }
             }
-            return output;
+            return objList;
         }
         console.log(sortObjListByName(input_array));
 
