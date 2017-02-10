@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 19</title>
+    <script>
+        var input_array =
+            [
+                {name: 'John', age: 42, gender: 'M'},
+                {name: 'Jack', age: 34, gender: 'M'},
+                {name: 'Michael', age: 40, gender: 'M'},
+                {name: 'Kendra', age: 48, gender: 'F'}
+            ];
+        function sortObjListByName(objList) {
+            var output = [];
+            var i, iPlus1;
+            var temp;
+            for (i = 0; i < objList.length - 1; i++) {
+                iPlus1 = i + 1;
+                if (objList[i][name] > objList[iPlus1][name]) {
+                    temp = objList[i];
+                    objList[i] = objList[i + 1];
+                    objList[i + 1] = temp;
+                    i = -1;
+                }
+            }
+            return output;
+        }
+        console.log(sortObjListByName(input_array));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
