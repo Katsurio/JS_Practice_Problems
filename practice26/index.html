@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <title>Practice Problem 25</title>
     <script>
-        var first_array = [3, -5, 15, 4];
-        var second_array = [3, 18, -5, -4];
+        var haze4Horses = ['cat', 'dog', 'bird', 'turtle', 'lizard'];
+        var kneeDull = ['dog', 'lizard', 'flower', 'monkey', 'unicorn'];
 
-        /** @function - Function that adds all the values from one array with the other array
+        /** @function - Function that finds all matching values from 2 arrays
          * @name addArrays
-         * @param {Number[]} firstArr - First array of numbers
-         * @param {Number[]} needleArr - Second array of numbers
+         * @param {Number[]} haystackArr - First array to search
+         * @param {Number[]} needleArr - Second array to search
+         * @return {string[]} - Returns an array of matched strings
          */
-        function addArrays(firstArr, needleArr) {
-
+        function searchArray(haystackArr, needleArr) {
+            var i, j;
+            var output = [];
+            var needle, haystack;
+            for (i = 0; i < needleArr.length; i++) {
+                needle = needleArr[i];
+                for (j = 0; j < haystackArr.length; j++) {
+                    haystack = haystackArr[j];
+                    if (needle == haystack) {
+                        output.push(needle);
+                    }
+                }
+            }
+            return output;
         }
-
+        console.log(searchArray(haze4Horses, kneeDull));
     </script>
 </head>
 <body>
