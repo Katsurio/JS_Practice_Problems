@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <title>Practice Problem 25</title>
     <script>
-//        /** @function - Function that finds all matching values from 2 arrays
-//         * @name addArrays
-//         * @param {Number[]} haystackArr - First array to search
-//         * @param {Number[]} needleArr - Second array to search
-//         * @return {string[]} - Returns an array of matched strings
-//         */
-
+        /** @function - Function that achieves the output with the given input
+         * @name mathSequence
+         * @param {Number} num - First array to search
+         * @return {Number[]} - Returns an array of numbers
+         */
 
         function mathSequence(num) {
-            var i;
+            var index;
             var output = [];
+            for (index = num * 2; index < num + 38; index+=2){
+                if(index > num * 10) {
+                    var o = index/4;
+                } else {
+                    o = index;
+                }
+                output.push(o);
+            }
+            return output;
         }
+
+        console.log(mathSequence(2));
     </script>
 </head>
 <body>
