@@ -8,19 +8,15 @@
         function sort(strArr) {
             var temp, i;
             for(i = 0; i < strArr.length; i++){
-                console.log("FOR LOOP @ i is: " + i);
                 if (strArr[i] > strArr[i+1]){
-                    console.log("Start IF @ i is: " + i);
                     temp = strArr[i];
                     strArr[i] = strArr[i+1];
                     strArr[i+1] = temp;
                     i = -1;
-                    console.log("End IF @ i is: " + i + " and strArr is: " + strArr);
                 }
             }
             return strArr;
         }
-
         console.log(sort(myArray));
     </script>
 </head>
