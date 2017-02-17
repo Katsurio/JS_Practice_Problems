@@ -13,16 +13,30 @@
         function ecks_Factor(arr) {
 
             var output = {},
-                i, temp, currIdex, factors;
+                i, j, temp, currIdxVal, factors;
 
             for (i = 0; i < arr.length; i++) {
-                debugger;
                 temp = arr[i];
-                factors = "Insert factors here";
-                output[temp] = [factors];
+                output["" + temp + ""] = [];
+                for (j = 0; j < arr.length; j++) {
+                    currIdxVal = arr[j];
+                    if (temp === currIdxVal) {
+                        return;
+                    }
+                    else if (temp % currIdxVal === 0) {
+                        output[temp].push(currIdxVal);
+                    }
+                    else {
+                        console.log("I'm Cocoa for CooCoo Puffs!!!, and not a match -_-");
+                    }
+                }
+//                temp = arr[i];
+//                factors = "Insert factors here";
+//                output[temp] = [factors];
 //                temp = arr[i];
 //                currIdx = output[temp];
 //                currIdx = [temp];
+                console.log()
             }
             return output;
         }
