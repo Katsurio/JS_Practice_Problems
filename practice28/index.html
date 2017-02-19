@@ -12,7 +12,7 @@
          * @return {Number[]} - Returns a string with the corresponding roman numerals.
          */
         function roaminNooms(num) {
-
+            debugger;
             var baseNooms = {
                 1: "I",
                 5: "V",
@@ -33,14 +33,18 @@
 
             if (num <= 0 || num >= 10000 || isNaN(num))
             {
+                debugger;
                 console.warn("Please enter a number from 1-9999");
             }
 
             else
             {
+                debugger;
                 for (i = 0; i < length; i++)
                 {
-                    tempIntVal = parseInt(str2arr[i], 10);
+                    debugger;
+                    length = str2arr.length;
+                    tempIdxVal = parseInt(str2arr[i], 10);
                     if (length === 4)
                     {
                         str2arr[i] = baseNooms['1000'].repeat(tempIdxVal);
@@ -125,10 +129,10 @@
                     }
                 }
             }
-            output = tempArr.join();
+            output = tempArr.join("");
             return output;
         }
-                console.log(roaminNooms(zeNumb));
+        console.log(roaminNooms(zeNumb));
     </script>
 </head>
 <body>
