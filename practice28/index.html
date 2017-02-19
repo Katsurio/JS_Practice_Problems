@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 28</title>
+    <script>
+        var zeNumb = 23;
+
+        /** @function - Function that takes in a number and converts it to roman numerals.
+         * @name roaminNooms
+         * @param {Number} num - The number to convert.
+         * @return {Number[]} - Returns a string with the corresponding roman numerals.
+         */
+        function roaminNooms(num) {
+            debugger;
+            var baseNooms = {
+                1: "I",
+                5: "V",
+                10: "X",
+                50: "L",
+                100: "C",
+                500: "D",
+                1000: "M"
+            };
+
+            var num2Str = num.toString(),
+                str2arr = num2Str.split(""),
+                length = str2arr.length,
+                tempArr = [],
+                tempIdxVal,
+                i,
+                output;
+
+            if (num <= 0 || num >= 10000 || isNaN(num))
+            {
+                debugger;
+                console.warn("Please enter a number from 1-9999");
+            }
+
+            else
+            {
+                debugger;
+                for (i = 0; i < length; i++)
+                {
+                    debugger;
+                    length = str2arr.length;
+                    tempIdxVal = parseInt(str2arr[i], 10);
+                    if (length === 4)
+                    {
+                        str2arr[i] = baseNooms['1000'].repeat(tempIdxVal);
+                        tempArr.push(str2arr[i]);
+                        str2arr.shift();
+                        i = -1;
+                    }
+
+                    else if (length === 3)
+                    {
+                        if (tempIdxVal > 5)
+                        {
+                            str2arr[i] = baseNooms['500'] + baseNooms['100'].repeat(tempIdxVal - 5);
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                        else if (tempIdxVal === 5)
+                        {
+                            str2arr[i] = baseNooms['500'];
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                        else
+                        {
+                            str2arr[i] = baseNooms['100'].repeat(tempIdxVal);
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                    }
+
+                    else if (length === 2)
+                    {
+                        if (tempIdxVal > 5)
+                        {
+                            str2arr[i] = baseNooms['50'] + baseNooms['10'].repeat(tempIdxVal - 5);
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                        else if (tempIdxVal === 5)
+                        {
+                            str2arr[i] = baseNooms['50'];
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                        else
+                        {
+                            str2arr[i] = baseNooms['10'].repeat(tempIdxVal);
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                    }
+
+                    else
+                    {
+                        if (tempIdxVal > 5)
+                        {
+                            str2arr[i] = baseNooms['5'] + baseNooms['1'].repeat(tempIdxVal - 5);
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                        else if (tempIdxVal === 5)
+                        {
+                            str2arr[i] = baseNooms['5'];
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                        else
+                        {
+                            str2arr[i] = baseNooms['1'].repeat(tempIdxVal);
+                            tempArr.push(str2arr[i]);
+                            str2arr.shift();
+                            i = -1;
+                        }
+                    }
+                }
+            }
+            output = tempArr.join("");
+            return output;
+        }
+        console.log(roaminNooms(zeNumb));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
