@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 24</title>
+    <script>
+        var arr1 = [[1, 2, 3], [3, 4, 5], [6, 7, 8]],
+            arr2 = [[1, 2, 3], [1, 2, 3], [1, 2, 3]];
+
+        /** @function - Function that takes in 2 multi-dimensional arrays and adds the values of their corresponding indexes.
+         * @name matrixAdd
+         * @param {Array.<Number[]>} arrOne -  A multi-dimensional array.
+         * @param {Array.<Number[]>} arrTwo -  A multi-dimensional array.
+         * @return {Array.<Number[]>} - Returns a multi-dimensional array.
+         */
+        function matrixAdd(arrOne, arrTwo) {
+            var i,
+                j,
+                testOne,
+                testTwo,
+                testThree,
+                testFour,
+                output = [[]],
+                lengthOne = arrOne[0].length,
+                lengthTwo = arrTwo[0].length;
+            for (i = 0; i < lengthOne; i++){
+                testOne = arrOne[0][i];
+                testTwo = arrTwo[0][i];
+                output[0].push(testOne + testTwo);
+//                for (j=0;j<lengthTwo;j++){
+//
+//                }
+            }
+            return output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
