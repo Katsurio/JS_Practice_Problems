@@ -13,26 +13,33 @@
          * @param {Array.<Number[]>} arrTwo -  A multi-dimensional array.
          * @return {Array.<Number[]>} - Returns a multi-dimensional array.
          */
-        function matrixAdd(arrOne, arrTwo) {
+        function matrixAdd(arrOne, arrTwo)
+        {
+
             var i,
                 j,
-                testOne,
-                testTwo,
-                testThree,
-                testFour,
-                output = [[]],
-                lengthOne = arrOne[0].length,
-                lengthTwo = arrTwo[0].length;
-            for (i = 0; i < lengthOne; i++){
-                testOne = arrOne[0][i];
-                testTwo = arrTwo[0][i];
-                output[0].push(testOne + testTwo);
-//                for (j=0;j<lengthTwo;j++){
-//
-//                }
+                addedVal,
+                tempArr,
+                output = [],
+                length = arrOne.length;
+
+            for (i = 0; i < length; i++)
+            {
+                tempArr = [];
+
+                for (j = 0; j < length; j++)
+                {
+                    addedVal = parseInt(arrOne[i][j]) + parseInt(arrTwo[i][j]);
+                    tempArr.push(addedVal);
+                }
+                output.push(tempArr);
             }
             return output;
         }
+
+        var result = matrixAdd(arr1, arr2);
+        console.log(result);
+
     </script>
 </head>
 <body>
