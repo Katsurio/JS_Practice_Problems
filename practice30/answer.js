@@ -19,6 +19,3 @@ function randomRange(startNum, endNum)
         return randArr;
     }
 }
-
-console.warn(randomRange(['a','b','c','d','e']));
-
