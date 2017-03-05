@@ -1,8 +1,11 @@
-/** @function - Function that returns a random element from either a range of 2 numbers or an array.
- * @name randomRange
- * @param {Number} startNum - Beginning number.
- * @param {Number} endNum - Ending number.
- * @return {Number} - Returns either a random element from within the range of the two numbers, or returns a random element from an array.
+/** @function - Function that multiplies the 1st number by the 2nd number; the result of that, it adds the 3rd number; the result of that, it divides by the 4th number; the result of that, it subtracts the 5th number.
+ * @name coCoCoComboMath
+ * @param {Number} num1 - First number.
+ * @param {Number} num2 - Second number.
+ * @param {Number} num3 - Third number.
+ * @param {Number} num4 - Fourth number.
+ * @param {Number} num5 - Fifth number.
+ * @return {Number} - Returns the result of num1 * num2 + num3 / num4 - num5.
  */
 function coCoCoComboMath(num1, num2, num3, num4, num5) {
     var output = ((((num1 * num2) + num3) / num4) - num5);
