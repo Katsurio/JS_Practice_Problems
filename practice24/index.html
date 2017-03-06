@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Practice Problem 24</title>
+    <script src="answer.js"></script>
     <script>
         var arr1 = [[1, 2, 3], [3, 4, 5], [6, 7, 8]],
             arr2 = [[1, 2, 3], [1, 2, 3], [1, 2, 3]];
@@ -13,32 +14,32 @@
          * @param {Array.<Number[]>} arrTwo -  A multi-dimensional array.
          * @return {Array.<Number[]>} - Returns a multi-dimensional array.
          */
-        function matrixAdd(arrOne, arrTwo)
-        {
-
-            var i,
-                j,
-                addedVal,
-                tempArr,
-                output = [],
-                length = arrOne.length;
-
-            for (i = 0; i < length; i++)
-            {
-                tempArr = [];
-
-                for (j = 0; j < length; j++)
-                {
-                    addedVal = parseInt(arrOne[i][j]) + parseInt(arrTwo[i][j]);
-                    tempArr.push(addedVal);
-                }
-                output.push(tempArr);
-            }
-            return output;
-        }
-
-        var result = matrixAdd(arr1, arr2);
-        console.log(result);
+//        function matrixAdd(arrOne, arrTwo)
+//        {
+//
+//            var i,
+//                j,
+//                addedVal,
+//                tempArr,
+//                output = [],
+//                length = arrOne.length;
+//
+//            for (i = 0; i < length; i++)
+//            {
+//                tempArr = [];
+//
+//                for (j = 0; j < length; j++)
+//                {
+//                    addedVal = parseInt(arrOne[i][j]) + parseInt(arrTwo[i][j]);
+//                    tempArr.push(addedVal);
+//                }
+//                output.push(tempArr);
+//            }
+//            return output;
+//        }
+//
+//        var result = matrixAdd(arr1, arr2);
+//        console.log(result);
 
     </script>
 </head>
