@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 26</title>
+    <script>
+        var haze4Horses = ['cat', 'dog', 'bird', 'turtle', 'lizard'];
+        var kneeDull = ['dog', 'lizard', 'flower', 'monkey', 'unicorn'];
+
+        /** @function - Function that finds all matching values from 2 arrays
+         * @name addArrays
+         * @param {Number[]} haystackArr - First array to search
+         * @param {Number[]} needleArr - Second array to search
+         * @return {string[]} - Returns an array of matched strings
+         */
+        function searchArray(haystackArr, needleArr) {
+            var i, j;
+            var output = [];
+            var needle, haystack;
+            for (i = 0; i < needleArr.length; i++) {
+                needle = needleArr[i];
+                for (j = 0; j < haystackArr.length; j++) {
+                    haystack = haystackArr[j];
+                    if (needle == haystack) {
+                        output.push(needle);
+                    }
+                }
+            }
+            return output;
+        }
+
+        console.log(searchArray(haze4Horses, kneeDull));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
