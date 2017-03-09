@@ -18,5 +18,3 @@ function addArrays(firstArr, needleArr) {
     }
     return output;
 }
-
-console.log(addArrays(first_array, second_array));
