@@ -11,4 +11,4 @@ function bipolarBearLoop(incr, decr) {
         console.log("i: " + i + " j: " + j);
     }
 }
-bipolarBearLoop(24, 45);
+console.log(bipolarBearLoop(24, 45));
