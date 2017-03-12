@@ -7,15 +7,14 @@ var expArr = [5,3,2,5,1];
 function randomizer5000(arr)
 {
     var temp,
-        i = arr.length,
+        i,
         output = [],
         iRanDumb;
-    for (i; i >= 0; i--)
+    for (i = arr.length; i > 0; i--)
     {
         iRanDumb = Math.floor(Math.random() * arr.length);
         temp = arr.splice(iRanDumb, 1);
         output.push(temp[0]);
-        i = arr.length;
     }
     return output;
 }
