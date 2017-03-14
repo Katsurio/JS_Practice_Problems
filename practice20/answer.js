@@ -1,5 +1,5 @@
 var expArr = [5,3,2,5,1];
-/** @function - Function that that takes an array and randomizes the order without resorting to using any pre-existing array methods.
+/** @function - Function that takes an array and randomizes the order without resorting to using any pre-existing array methods.
  * @name randomizer5000
  * @param {Number} arr - Array to be randomized.
  * @return {Number[]} - Returns a randomized array.
