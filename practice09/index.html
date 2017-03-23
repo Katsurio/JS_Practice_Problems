@@ -3,31 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Practice Problem 9</title>
-    <script>
-        var myArray = ['cat', 'caterpillar', 'whale', 'accurate', 'smile', 'cactus', 'cute'];
-        var word = 'cat';
-
-        function fittingWords(str, arrOstrs) {
-            var regex = /[str]+/gi;
-            var i;
-            var output = [];
-
-            for (i = 0; i < arrOstrs.length; i++) {
-
-                var currIdxVal = arrOstrs[i];
-                var regexResult = regex.test(currIdxVal); //returns true or false
-
-                var currIdxLength = currIdxVal.length;
-                var strLength = str.length;
-
-                if (regexResult && currIdxLength >= strLength) {
-                    output.push(arrOstrs[i]);
-                }
-            }
-            return output;
-        }
-        console.log(fittingWords(word, myArray));
-    </script>
+    <script src="answer.js"></script>
 </head>
 <body>
 
