@@ -4,10 +4,14 @@ var myarray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
  * @param {Array} arr - An array of anything.
  * @return {Array.<Array>} - Returns a multidimensional array grouped by data type.
  */
-function wunTooMullTea(arr) {
+function wunTooMullTea(arr)
+{
     var temp = [[],[],[]];
-    for (var i = 0; i < arr.length; i++) {
-        switch (typeof arr[i]) {
+
+    for (var i = 0; i < arr.length; i++)
+    {
+        switch (typeof arr[i])
+        {
             case "boolean":
                 temp[2].push(arr[i]);
                 break;
