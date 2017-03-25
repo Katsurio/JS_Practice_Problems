@@ -3,33 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Practice Problem 3</title>
-    <script>
-        var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
-
-        function wunTooMullTea(Arr) {
-            var temp = [[],[],[]];
-            for (var i = 0; i < Arr.length; i++) {
-                switch (typeof Arr[i]) {
-                    case "boolean":
-                        temp[2].push(Arr[i]);
-                        break;
-                    case "number":
-                        temp[1].push(Arr[i]);
-                        break;
-                    case "string":
-                        temp[0].push(Arr[i]);
-                        break;
-                    default:
-                        alert("Something's not right");
-                }
-            }
-            return temp;
-        }
-
-        console.log(wunTooMullTea(myArray));
-    </script>
+    <script src="answer.js"></script>
 </head>
-<body>
-
-</body>
+<body></body>
 </html>
