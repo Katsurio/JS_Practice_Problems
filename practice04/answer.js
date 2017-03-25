@@ -4,10 +4,14 @@ var myArray = ['mouse', 'cat', 'dog', 'human'];
  * @param {String[]} arr - An array of strings.
  * @return {String[]} - Returns an array containing all the strings from the input array but in alphabetical order.
  */
-function sort(arr) {
+function sort(arr)
+{
     var temp, i;
-    for(i = 0; i < arr.length; i++){
-        if (arr[i] > arr[i+1]){
+
+    for(i = 0; i < arr.length; i++)
+    {
+        if (arr[i] > arr[i+1])
+        {
             temp = arr[i];
             arr[i] = arr[i+1];
             arr[i+1] = temp;
