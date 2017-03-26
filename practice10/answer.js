@@ -23,7 +23,6 @@ function permutations(str)
         }
 
     } while (i < arrMaxLength);
-//            for (i = 0; i < arrMaxLength; i++) {
-//
+//            for (i = 0; i < arrMaxLength; i++)
 //            }
 }
