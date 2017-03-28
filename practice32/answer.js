@@ -8,7 +8,8 @@ function findMid(str)
 {
     var length = str.length,
         midLetter = Math.floor(length / 2);
-    if(length % 2 === 1)
+
+    if(length % 2)
     {
         return str.substr(midLetter, 1);
     }
