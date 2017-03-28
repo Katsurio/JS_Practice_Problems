@@ -18,15 +18,3 @@ function findMid(str)
     }
 }
 console.warn(findMid(superVar));
-
-// function findMid(str)
-// {
-//     var i,
-//         length = str.length,
-//         halfway = length / 2;
-//     if(length % 2)
-//     {
-//         midLetter = Math.floor(halfway);
-//         return str.substring(midLetter, 1);
-//     }
-// }
