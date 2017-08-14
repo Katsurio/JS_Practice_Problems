@@ -1,4 +1,4 @@
-var superVar = "Supers";
+var superVar = "Super";
 /** @function - Function that finds the middle of a string.
  * @name findMid
  * @param {String} str - A string.
@@ -8,13 +8,14 @@ function findMid(str)
 {
     var length = str.length,
         midLetter = Math.floor(length / 2);
-    if(length % 2 === 1)
+
+    if(length % 2)
     {
-        return str.substr(midLetter, midLetter + 1);
+        return str.substr(midLetter, 1);
     }
     else
     {
-        return str.substr(midLetter - 1, midLetter);
+        return str.substr(midLetter - 1, 2);
     }
 }
 console.warn(findMid(superVar));
