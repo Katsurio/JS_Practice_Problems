@@ -27,29 +27,20 @@ let myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
 // }
 
 
-const oneToMulti = (arr) => {
+let oneToMulti = (arr) => {
     let temp = [[],[],[]];
-
-    return arr.map((word) => {
-        console.log("This: " + word);
-        if(typeof word === "boolean") {  }
-
-
-
-
+    arr.map((word) => {
         switch (typeof word) {
             case "boolean":
-                temp[2].push(word);
-                break;
+                return temp[2].push(word);
             case "number":
-                temp[1].push(word);
-                break;
+                return temp[1].push(word);
             case "string":
-                temp[0].push(word);
-                break;
+                return temp[0].push(word);
             default:
-                alert("Something's not right");
+                console.log("Something's not right");
         }
     });
+    return temp;
 };
-console.log(oneToMulti(myarray));
+console.log(oneToMulti(myArray));
